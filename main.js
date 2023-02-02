@@ -25,8 +25,8 @@ for (let i = 0; i < imgList.length; i++) {
     const element = imgList[i];
     const newImage = document.createElement('img');
     newImage.innerText = element;
-    newImage.setAttribute('src', element);
-    newImage.setAttribute('alt', element);
+    newImage.setAttribute('src', altObj);
+    newImage.setAttribute('alt', imgList);
     thumbBar.appendChild(newImage);
 }
 /* Wiring up the Darken/Lighten button */
