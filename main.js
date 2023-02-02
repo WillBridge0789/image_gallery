@@ -6,26 +6,38 @@ const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
 const imgList = [
-    'pic1.jpg',
-    'pic2.jpg',
-    'pic3.jpg',
-    'pic4.jpg',
-    'pic5.jpg'
+    'altPic1.jpg',
+    'altPic2.JPG',
+    'altPic3.JPG',
+    'altPic4.JPG',
+    'altPic5.JPG'
 ]
 /* Declaring the alternative text for each image file */
 const altObj = {
-    'pic1.jpg': 'Close up of a human eye',
-    'pic2.jpg': 'Rock formation',
-    'pic3.jpg': 'Purple and White Flowers',
-    'pic4.jpg': 'Heiroglyphics',
-    'pic5.jpg': 'Monarch Butterfly'
+    'altPic1.jpg': 'Fantasy character',
+    'altPic2.JPG': 'Desert gear',
+    'altPic3.JPG': 'Sonic Character inspo Echidna',
+    'altPic4.JPG': 'Warped Thinking',
+    'altPic5.JPG': 'Crystal Stasis'
 }
 /* Looping through images */
-for (const image of imgList) {
+for (let i = 0; i < imgList.length; i++) {    
     const element = imgList[i];
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', xxx);
-    newImage.setAttribute('alt', xxx);
+    newImage.setAttribute('src', "./images/" + element);
+    newImage.setAttribute('alt', altObj[element]);
     thumbBar.appendChild(newImage);
 }
 /* Wiring up the Darken/Lighten button */
+btn.addEventListener('click', () => {
+    const btnClass = btn.getAttribute('class');
+    if (btnClass === 'dark') {
+        btn.setAttribute('class', 'light');
+        btn.textContent = 'Lighten';
+        overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    } else {
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Darken';
+        overlay.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    }
+})
