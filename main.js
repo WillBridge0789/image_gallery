@@ -24,6 +24,7 @@ const altObj = {
 for (let i = 0; i < imgList.length; i++) {
     const element = imgList[i];
     const newImage = document.createElement('img');
+    newImage.getElementsByClassName('thumb-bar');
     newImage.setAttribute('src', element);
     newImage.setAttribute('alt', element);
     thumbBar.appendChild(newImage);
