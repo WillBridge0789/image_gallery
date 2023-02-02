@@ -21,12 +21,12 @@ const altObj = {
     'pic5.jpg': 'Monarch Butterfly'
 }
 /* Looping through images */
-for (let i = 0; i < imgList.length; i++) {
+for (const image of imgList) {
     const element = imgList[i];
     const newImage = document.createElement('img');
     newImage.innerText = element;
     newImage.setAttribute('src', xxx);
-    newImage.setAttribute('alt', i);
+    newImage.setAttribute('alt', xxx);
     thumbBar.appendChild(newImage);
 }
 /* Wiring up the Darken/Lighten button */
