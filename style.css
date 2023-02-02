@@ -11,7 +11,7 @@ h1 {
   body {
     width: 640px;
     margin: 0 auto;
-    background-color: rgb(171, 170, 170);
+    background-image: linear-gradient(rgb(189, 188, 188), rgb(156, 151, 151));
   }
   
   .full-img {
